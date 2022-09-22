@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Dashboard Sidebar Menu</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Mysidebar</span>
+                    <span class="profession">hii</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links" id="ul">
+
+                    <!-- dynamically created  -->
+                    <!-- <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <section class="home">
+        <div class="text">Dashboard Sidebar</div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        var ul = document.getElementById("ul");
+
+        let myyarray = ["A", "b", "C", "D"];
+        for (var i of myyarray) {
+            var li = document.createElement("li");
+            li.classList.add("nav-link");
+            var anchor = document.createElement("a");
+            anchor.href = "#";
+            anchor.innerHTML = '<i class="bx bx-chevron-right icon"></i>';
+            var spann = document.createElement("span");
+            spann.setAttribute("class", "text nav-text");
+            spann.innerHTML = i;
+            anchor.append(spann)
+            li.appendChild(anchor)
+            ul.appendChild(li);
+
+
+        }
+    </script>
+
+</body>
+
+</html>
